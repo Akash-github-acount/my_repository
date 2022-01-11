@@ -1,0 +1,37 @@
+[More on branching..]
+
+Git branching allows the users to fix the code without making changes to the main branch (prod version). This basically means code can be tested before merging to the main branch.
+
+How to download a branch from remote repo (GutHub)
+
+#git pull origin <branch name>
+
+[Creating a branch from commit]
+
+Commit acts as a snapshot in a repository taken at a specific time when you commit the code
+
+#git log - This command will list all the commits with the 'commit message'
+#git branch <branch name> <first 6 chars of the commit id>
+
+[Merge into main]
+
+This allows the branch changes to be implemented in to the main branch
+
+git checkout main   //poiting to main branch
+git merge <branch name> //this is the branch name where your code is present 
+
+[Git Clone]
+
+What is meant by cloning a repo?
+Why cloning of repo is done?
+
+- Create a repo in GitHub -- can be done
+- Clone that repo in local -- git clone <url of repo>
+- We'll create some files and modify few files -- can be done
+- Push the changes to GitHub -- add/commit/push
+
+Note: 
+When we clone a repo from GitHub - given that the repo on github has multiple branches, then on local we see only the main branch i.e by default, git clone creates only one branch - i.e currently checkout out one - usually main.
+To see the other branches, use 'git branch -a'
+To point to the other branch -> git checkout <full path of branch> and then use ls to see the data for that specific branch.
+
